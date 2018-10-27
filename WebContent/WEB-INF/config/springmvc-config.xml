@@ -9,15 +9,15 @@
  
  
         <!-- 配置自动扫描的包 -->
-      <!--   <context:component-scan base-package="com.fu.springmvc"></context:component-scan> -->
+        <context:component-scan base-package="com.fu.springmvc"></context:component-scan>
  
         <!-- 配置视图解析器 如何把handler 方法返回值解析为实际的物理视图 -->
         <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
             <property name = "prefix" value="/WEB-INF/jsp/"></property>
             <property name = "suffix" value = ".jsp"></property>
         </bean>
-        <bean name="/product_input.action" class="com.fu.springmvc.controller.InputProductController"></bean>
-        <bean name="/product_save.action" class="com.fu.springmvc.controller.SaveProductController"></bean>
+       <!--  <bean name="/product_input.action" class="com.fu.springmvc.controller.InputProductController"></bean>
+        <bean name="/product_save.action" class="com.fu.springmvc.controller.SaveProductController"></bean> -->
         
         
 </beans>
