@@ -27,7 +27,7 @@ public class InputProductController  implements Controller{
 			throws Exception {
 		
 		logger.info("InputProductController called");
-		return new ModelAndView("/WEB-INF/jsp/ProductForm.jsp");
+		return new ModelAndView("ProductForm");
 	}
 
 }

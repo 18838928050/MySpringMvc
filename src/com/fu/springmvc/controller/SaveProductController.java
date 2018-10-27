@@ -39,7 +39,7 @@ public class SaveProductController implements Controller{
 		product.setName(productForm.getName());
 		product.setDescription(productForm.getDescription());
 		product.setPrice(Float.parseFloat(productForm.getPrice()));
-		return new ModelAndView("WEB-INF/jsp/ProductDetail.jsp","product",product);
+		return new ModelAndView("ProductDetail","product",product);
 	}
 	
 

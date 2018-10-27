@@ -8,7 +8,7 @@
 		<!-- 配置Spring mvc下的配置文件的位置和名称 -->
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/springmvc.xml</param-value>
+			<param-value>/WEB-INF/config/springmvc-config.xml</param-value>
 		</init-param>
 		<!-- 随系统启动 -->
 		<load-on-startup>1</load-on-startup>
