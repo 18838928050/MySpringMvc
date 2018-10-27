@@ -15,6 +15,7 @@ import org.springframework.web.servlet.mvc.Controller;
  @author： fu    @time：2018年10月27日 下午1:02:43 
  @说明： 一份耕耘，一份收获
 **/
+/*@org.springframework.stereotype.Controller*/
 public class InputProductController  implements Controller{
 
 	private static final Log logger=LogFactory.getLog(InputProductController.class);
@@ -23,6 +24,8 @@ public class InputProductController  implements Controller{
 	 * @see org.springframework.web.servlet.mvc.Controller#handleRequest(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	@Override
+	//为了使用Product而注释掉
+	/*@RequestMapping(value="/product_input")*/
 	public ModelAndView handleRequest(HttpServletRequest arg0, HttpServletResponse arg1)
 			throws Exception {
 		
