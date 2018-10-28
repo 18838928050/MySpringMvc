@@ -13,6 +13,11 @@ import java.io.Serializable;
  * Product 类实现了Serializable,其实例可以安全的将数据保存到HttpSession中
  */
 public class Product implements Serializable {
+	
+	/*
+	 * 产品id序列号，主键
+	 */
+	private long id;
 
 	/*
 	 * 产品名称
@@ -44,6 +49,13 @@ public class Product implements Serializable {
 	public void setPrice(float price) {
 		this.price = price;
 	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	
 	
 	
 	
