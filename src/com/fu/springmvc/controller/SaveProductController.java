@@ -21,7 +21,7 @@ import vo.Product;
 **/
 @org.springframework.stereotype.Controller
 public class SaveProductController implements Controller{
-
+	
 	private static final Log logger=LogFactory.getLog(SaveProductController.class);
 	
 	@Override

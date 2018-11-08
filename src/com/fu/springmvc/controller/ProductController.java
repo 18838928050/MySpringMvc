@@ -5,6 +5,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,12 +31,16 @@ public class ProductController {
         return "ProductForm";
     }
 
+    @RequestMapping(value = "/product_toForm")
+    public String toForm() {
+        return "Form";
+    }
+
+    
     @RequestMapping(value = "/product_save", method = RequestMethod.POST)
-    public String saveProduct(ProductForm productForm, RedirectAttributes redirectAttributes) {
+    //重定向的RedirectAttributes方法，用于重定向后还能带参数跳转
+    public String saveProduct(@ModelAttribute("newproduct") Product product, ProductForm productForm, RedirectAttributes redirectAttributes) {
         logger.info("saveProduct called");
-        // no need to create and instantiate a ProductForm
-        // create Product
-        Product product = new Product();
         product.setName(productForm.getName());
         product.setDescription(productForm.getDescription());
         try {
@@ -43,7 +48,6 @@ public class ProductController {
         } catch (NumberFormatException e) {
         }
 
-        // add product
         Product savedProduct = productService.add(product);
         
         redirectAttributes.addFlashAttribute("message", "The product was successfully added.");

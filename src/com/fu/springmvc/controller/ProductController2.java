@@ -32,7 +32,6 @@ public class ProductController2 {
                     productForm.getPrice()));
         } catch (NumberFormatException e) {
         }
-
         // add product
 
         model.addAttribute("product", product);
